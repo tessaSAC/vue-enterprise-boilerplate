@@ -1,6 +1,10 @@
 <script>
 export default {
   props: {
+    label: {
+      type: String,
+      default: '',
+    },
     type: {
       type: String,
       default: 'text',
@@ -22,16 +26,24 @@ export default {
 </script>
 
 <template>
-  <input
-    :type="type"
-    :value="value"
-    :class="$style.input"
-    v-on="listeners"
-  >
+  <label :class="$style.label">
+    {{ label }}
+    <input
+      :type="type"
+      :value="value"
+      :class="$style.input"
+      v-on="listeners"
+    >
+  </label>
 </template>
 
 <style lang="scss" module>
 @import '@design';
+
+.label {
+  @extend %typography-small;
+  color: $color-heading-text;
+}
 
 .input {
   @extend %typography-small;

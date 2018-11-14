@@ -7,7 +7,10 @@ export default {
     title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
+
   components: { Layout },
+
+  data: _ => ({}),
 }
 </script>
 
@@ -18,5 +21,9 @@ export default {
       src="@assets/images/logo.png"
       alt="Logo"
     >
+    <BaseInput v-model="productToAdd" />
+    <BaseButton @click="addToList">
+      add item
+    </BaseButton>
   </Layout>
 </template>

@@ -1,4 +1,8 @@
-import { mapState, mapGetters, mapActions } from 'vuex'
+import {
+  mapState,
+  mapGetters,
+  mapActions
+} from 'vuex'
 
 export const authComputed = {
   ...mapState('auth', {
@@ -8,3 +12,12 @@ export const authComputed = {
 }
 
 export const authMethods = mapActions('auth', ['logIn', 'logOut'])
+
+export const shoppingListComputed = {
+  ...mapState('shoppingList', {
+    list: state => state.list
+  }),
+  ...mapGetters('shoppingList', ['shoppingList'])
+}
+
+export const shoppingListMethods = mapActions('shoppingList', ['addItem', 'removeItem'])
