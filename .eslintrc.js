@@ -51,16 +51,6 @@ module.exports = {
         'vue/valid-v-slot': 'error',
 
         // custom:
-        'vue/max-attributes-per-line': [
-            'error',
-            {
-                singleline: 3,
-                multiline: {
-                    max: 1,
-                    allowFirstLine: false,
-                },
-            },
-        ],
         'vue/require-default-prop': 'off',
         'vue/singleline-html-element-content-newline': 'off',
     },
