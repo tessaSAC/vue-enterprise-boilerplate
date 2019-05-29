@@ -3,17 +3,12 @@
 
 import { getStore } from './utils'
 
-Cypress.Commands.add(
-  'logIn',
-  ({ username = 'admin', password = 'password' } = {}) => {
+Cypress.Commands.add('logIn', ({ username = 'admin', password = 'password' } = {}) => {
     // Manually log the user in
     cy.location('pathname').then((pathname) => {
-      if (pathname === 'blank') {
-        cy.visit('/')
-      }
+        if (pathname === 'blank') {
+            cy.visit('/')
+        }
     })
-    getStore().then((store) =>
-      store.dispatch('auth/logIn', { username, password })
-    )
-  }
-)
+    getStore().then((store) => store.dispatch('auth/logIn', { username, password }))
+})

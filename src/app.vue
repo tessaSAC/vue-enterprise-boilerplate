@@ -2,24 +2,24 @@
 import appConfig from '@src/app.config'
 
 export default {
-  page: {
-    // All subcomponent titles will be injected into this template.
-    titleTemplate(title) {
-      title = typeof title === 'function' ? title(this.$store) : title
-      return title ? `${title} | ${appConfig.title}` : appConfig.title
+    page: {
+        // All subcomponent titles will be injected into this template.
+        titleTemplate(title) {
+            title = typeof title === 'function' ? title(this.$store) : title
+            return title ? `${title} | ${appConfig.title}` : appConfig.title
+        },
     },
-  },
 }
 </script>
 
 <template>
-  <div id="app">
-    <!--
+    <div id="app">
+        <!--
     Even when routes use the same component, treat them
     as distinct and create the component again.
     -->
-    <RouterView :key="$route.fullPath" />
-  </div>
+        <RouterView :key="$route.fullPath" />
+    </div>
 </template>
 
 <!-- This should generally be the only global CSS in the app. -->
@@ -40,14 +40,14 @@ export default {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background: $color-body-bg;
+    background: $color-body-bg;
 }
 #app {
-  @extend %typography-small;
+    @extend %typography-small;
 }
 
 // ===
@@ -56,28 +56,28 @@ body {
 
 a,
 a:visited {
-  color: $color-link-text;
+    color: $color-link-text;
 }
 
 h1 {
-  @extend %typography-xxlarge;
+    @extend %typography-xxlarge;
 }
 
 h2 {
-  @extend %typography-xlarge;
+    @extend %typography-xlarge;
 }
 
 h3 {
-  @extend %typography-large;
+    @extend %typography-large;
 }
 
 h4 {
-  @extend %typography-medium;
+    @extend %typography-medium;
 }
 
 h5,
 h6 {
-  @extend %typography-small;
+    @extend %typography-small;
 }
 
 // ===
@@ -85,6 +85,6 @@ h6 {
 // ===
 
 #nprogress .bar {
-  background: $color-link-text;
+    background: $color-link-text;
 }
 </style>

@@ -1,26 +1,26 @@
 # Setup and development
 
-- [Setup and development](#setup-and-development)
-  - [First-time setup](#first-time-setup)
-  - [Installation](#installation)
-  - [Dev server](#dev-server)
-    - [Developing with the production API](#developing-with-the-production-api)
-  - [Generators](#generators)
-  - [Aliases](#aliases)
-  - [Globals](#globals)
-    - [Base components](#base-components)
+-   [Setup and development](#setup-and-development)
+    -   [First-time setup](#first-time-setup)
+    -   [Installation](#installation)
+    -   [Dev server](#dev-server)
+        -   [Developing with the production API](#developing-with-the-production-api)
+    -   [Generators](#generators)
+    -   [Aliases](#aliases)
+    -   [Globals](#globals)
+        -   [Base components](#base-components)
 
 ## First-time setup
 
 Make sure you have the following installed:
 
-- [Node](https://nodejs.org/en/) (at least the latest LTS)
-- [Yarn](https://yarnpkg.com/lang/en/docs/install/) (at least 1.0)
+-   [Node](https://nodejs.org/en/) (at least the latest LTS)
+-   [Yarn](https://yarnpkg.com/lang/en/docs/install/) (at least 1.0)
 
 Then update the following files to suit your application:
 
-- `src/app.config.json` (provides metadata about your app)
-- `.circleci/config.yml` (assuming you want to automatically [deploy to production](production.md) with continuous integration)
+-   `src/app.config.json` (provides metadata about your app)
+-   `.circleci/config.yml` (assuming you want to automatically [deploy to production](production.md) with continuous integration)
 
 ## Installation
 

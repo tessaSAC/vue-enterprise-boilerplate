@@ -1,7 +1,7 @@
 # State management
 
-- [Modules](#modules)
-- [Helpers](#helpers)
+-   [Modules](#modules)
+-   [Helpers](#helpers)
 
 ## Modules
 
@@ -21,8 +21,8 @@ Here's an example:
 import { authComputed } from '@state/helpers'
 
 export default {
-  computed: {
-    ...authComputed,
-  },
+    computed: {
+        ...authComputed,
+    },
 }
 ```
